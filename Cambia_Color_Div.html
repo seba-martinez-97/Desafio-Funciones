@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASD</title>
+</head>
+
+<body>
+    <div id="key" style="width: 200px; height: 200px; background-color: white; border: 1px solid black;"></div>
+
+    <script>
+        var colorGlobal;
+
+        document.addEventListener('keydown', function (event) {
+            var newDiv = document.createElement('div');
+            newDiv.style.width = '200px';
+            newDiv.style.height = '200px';
+            newDiv.style.border = '1px solid black';
+
+            switch (event.key) {
+                case 'a':
+                    colorGlobal = 'pink';
+                    document.getElementById('key').style.backgroundColor = colorGlobal;
+                    break;
+                case 's':
+                    colorGlobal = 'orange';
+                    document.getElementById('key').style.backgroundColor = colorGlobal;
+                    break;
+                case 'd':
+                    colorGlobal = 'skyblue';
+                    document.getElementById('key').style.backgroundColor = colorGlobal;
+                    break;
+                case 'q':
+                    newDiv.style.backgroundColor = 'purple';
+                    document.body.appendChild(newDiv);
+                    break;
+                case 'w':
+                    newDiv.style.backgroundColor = 'gray';
+                    document.body.appendChild(newDiv);
+                    break;
+                case 'e':
+                    newDiv.style.backgroundColor = 'brown';
+                    document.body.appendChild(newDiv);
+                    break;
+            }
+        });
+    </script>
+</body>
+
+</html>
